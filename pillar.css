@@ -74,15 +74,15 @@ figcaption {
 @media only screen and (min-width: 30em) {
 }
 @media only screen and (min-width: 40em) {
-	p, a, b, u, i, li {
+	body {
 		font-size: 1.1em;	}
 }
 @media only screen and (min-width: 50em) {
-	p, a, b, u, i, li {
+	body {
 		font-size: 1em;	}
 }
 @media only screen and (min-width: 64em) {
-	p, a, b, u, i, li {
+	body {
 		font-size: 1.2em;	}
 }
 @media only screen and (min-width: 87.5em) {
