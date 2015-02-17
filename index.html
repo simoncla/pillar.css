@@ -3,78 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Pillar.css by simoncla</title>
+    <title>Pillar.css by Simon Clavey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
     <link rel="stylesheet" href="pillar.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
+    </script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
     <style type="text/css">
+      html, body { min-height: 100%; background-color: #ddd; padding-bottom: 0; margin: 0; margin-top: 5px; }
+
       .btns {
-        text-align: center; }
+        text-align: center; margin: .5em 0; }
 
-      .button {
-        display: inline-block;
-        text-align: center;
-        font-size: 1em;
-        margin: 1em;
-        padding: .4em 1em;
-        color: #111;
-        border: 1px solid #111;
-        border-radius: 2px;
-        text-decoration: none; }
+        .btns a {
+          opacity: 0.25;
+          margin: 0 1em .5em;
+        }
+          .btns a:hover {
+            opacity: 1;
+          }
 
-        .button:hover {
-          text-decoration: none;
-          border: 1px solid #FE7F48; }
+      #phantom {
+        display: block;
+        background-color: #fff;
+        margin: 0 auto;
+        box-shadow: 0px 0px 10px #ccc; }
+
     </style>
+
   </head>
   <body>
-    <div class="wrap">
-
-      <aside>
-        <h1>Welcome to Pillar.css.</h1>
-        <div class="btns">
-          <a class="button" href="https://github.com/simoncla/pillar.css/zipball/master">Download <strong>ZIP File</strong></a>
-          <a class="button" href="https://github.com/simoncla/pillar.css/tarball/master">Download <strong>TAR Ball</strong></a>
-          <a class="button" href="https://github.com/simoncla/pillar.css">View On <strong>GitHub</strong></a>
-        </div>
-      </aside>
-
-      <section>
-        <h2>Heading level two.</h2>
-
-        <p>This is an experiment combining the best typography practices across devices from Desktop to Mobile. Everything here (<em>including content</em>) is just to showcase the different variations across all mediums. This project is responsive so making your browser viewport smaller &amp; bigger will effect the layout and look of the page. </p>
-
-        <p>If the sentences feel a little <em>long-winded</em> it's because I am trying to hit a certain word count to fill out the paragraphs, don't worry about it.</p>
-
-        <h3>Heading level three.</h3>
-
-        <p>I wonder if anyone reads beyond the first paragraph. I mean after reading the fact stated that this is just a collection of letters arranged in a way they form words for the purpose of forming paragraphs. I probably wouldn't read it either, sounds like a horrible way to fabricate content. </p>
-        <ol>
-          <li>List items, you can always have fun with list items.</li>
-          <li>Sometimes I wonder why.</li>
-          <li><sup>10</sup>&frasl;<sub>10</sub> would not read again.</li>
-        </ol>
-
-        <h3>Heading level three.</h3>
-
-        <p>Photos, photos are always fun to look at because they break the normal flow of the page, so here is one for you.</p>
-
-        <figure>
-          <img src="http://upload.wikimedia.org/wikipedia/commons/2/27/Dammam_Airport.jpg">
-          <figcaption>Inside the passenger terminal of King Fahd International Airport</figcaption>
-        </figure>
-
-        <p>Yeah, that's right. I just showed you a photo of an international airport &amp; you loved it. It's crazy that photos are so much fun for how simple they are. Conceptual art introduced photography into contemporary art making, using the medium in ways that challenged it artistically, intellectually, and technically and broadened the notion of what a photograph could be in art. </p>
-
-        <h3><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-        <p>Want to talk about what just happened here? Well, this project is maintained and was created by <a href="http://simonclavey.co.uk/about">Simon Clavey</a>.</p>
-      </section>
+    <div class="btns">
+      <a id="desktop" href="#"><img src="imgs/desktop.png"></a>
+      <a id="tablet" href="#"><img src="imgs/tablet.png"></a>
+      <a id="mobile" href="#"><img src="imgs/mobile.png"></a>
     </div>
+
+    <iframe id="phantom" src="pillar.html" frameborder="0" scrolling="no" align="middle" width="1280px" onload='resizeIframe(this);'></iframe>
+
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/app.js"></script>
 
   </body>
 </html>
