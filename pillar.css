@@ -16,8 +16,11 @@ body {
 h1, h2, h3 {
 	font-family: serif;
 	margin: 2.5em auto 1em;
-	font-weight: 700;
+	font-weight: 400;
 	position: relative; }
+
+	h1 {
+		text-align: center; }
 
 	h1:after {
 		content: '';
@@ -30,12 +33,7 @@ h1, h2, h3 {
 		margin: 0 auto;
 		background: #222; }
 
-	h1 { font-size: 300%; text-align: center; }
-	h2 { font-size: 200%; }
-	h3 { font-size: 160%; }
-
 p, a, b, u, i, li {
-	font-family: serif;
 	margin: 0 auto 1em;
 	color: #333; }
 
@@ -74,7 +72,6 @@ figcaption {
 	max-width: 100%;
 	margin: 0em auto 0;
 	text-align: left;
-	font-family: sans-serif;
 	font-size: 0.75em;
 	color: #666; }
 
@@ -85,7 +82,7 @@ figcaption {
 		font-size: 120%;
 		line-height: 1.4em;	}
 
-	p, ul, ol, blockquote, h1, h2, h3, figcaption { max-width: 480px; }
+	p, ul, ol, blockquote, h1, h2, h3, figcaption { max-width: 90%; }
 }
 
 @media only screen and (min-width: 479px) {
@@ -99,15 +96,17 @@ figcaption {
 		font-size: 120%;
 		line-height: 1.5em;	}
 
-	p, ul, ol, blockquote, h1, h2, h3, figcaption { max-width: 520px; }
+	p, ul, ol, blockquote, h1, h2, h3, figcaption { max-width: 75%; }
 
 }
 
 @media only screen and (min-width: 1080px) {
 	body { font-size: 1.1em; }
+	p, ul, ol, blockquote, h1, h2, h3, figcaption { max-width: 50%; }
 
-	p, li {
-		font-size: 140%;	}
+	p, li, i { font-size: 130%;	}
 
-	p, ul, ol, blockquote, h1, h2, h3, figcaption { max-width: 640px; }
+	h1 { font-size: 210%; }
+	h2 { font-size: 185%; }
+	h3 { font-size: 170%; }
 }
