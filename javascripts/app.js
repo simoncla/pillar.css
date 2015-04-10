@@ -12,6 +12,6 @@ $('#tablet').click(function(e) {
 
 $('#desktop').click(function(e) {
     e.preventDefault();
-  $('#phantom').attr('width', '1280px');
+  $('#phantom').attr('width', '1400px');
   // $('html').attr('style', 'max-width: auto; margin: 0 auto;');
 });
