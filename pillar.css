@@ -1,0 +1,251 @@
+/*
+    Pillar.css v2
+    Functional CSS toolkit
+    http://clavey.co/project/pillarcss
+
+    Simon Clavey
+    http://clavey.co
+*/
+* {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;}
+body { line-height: 1; }
+
+.row {
+    width: 100%;
+    display: table;
+    table-layout: fixed; }
+@media (min-width: 1000px) {
+.col {
+    vertical-align: top;
+    position: relative;
+    display: table-cell;
+    width: 100%;
+    padding: 0 2%; }}
+
+/* Images */
+img { max-width: 100%; }
+figure { -ms-interpolation-mode: bicubic }
+
+/* Typography */
+.wf-loading body { visibility: hidden; }
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+h1 { font-size: 5rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3rem; }
+h4 { font-size: 2rem; }
+p,
+li {
+    font-size: 1.6rem;
+    line-height: 1.5; }
+
+.small,
+small { font-size: 1.4rem }
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 { margin-left: auto; margin-right: auto; max-width: 64rem }
+
+.white { color: rgba(255,255,255,.95) }
+.black { color: rgba(0,0,0,.95) }
+.grey { color: rgba(60,60,60,.95) }
+.orange { color: rgba(235,94,40,.95) }
+
+
+@media (min-width: 600px) {
+    p,
+    li { font-size: 1.8rem; }
+	h1 { font-size: 3.6rem; }
+	h2 { font-size: 2.6rem; }
+	h3 { font-size: 2.4rem; } }
+
+@media (min-width: 800px) {
+	h1 { font-size: 4rem; }
+	h2 { font-size: 3rem; }
+	h3 { font-size: 2.4rem; } }
+
+@media (min-width: 1000px) {
+    p,
+    li { font-size: 2rem; }
+    h1 { font-size: 4.6rem; }
+	h2 { font-size: 3.6rem; }
+	h3 { font-size: 2.6rem; } }
+
+/* Spacing */
+input,
+textarea,
+select,
+pre,
+fieldset,
+p,
+blockquote,
+dl,
+figure,
+table,
+ul,
+ol,
+form { margin-bottom: 4rem; }
+
+
+/* Functions */
+.bg-black { background-color: rgb(0,0,0) }
+.bg-white { background-color: rgb(255,255,255) }
+.bg-img { background-position: top center }
+    .cover { background-size: cover; background-repeat: no-repeat }
+
+.min-w { min-width: 100% }
+.max-w { max-width: 100% }
+.min-h { min-height: 100% }
+.max-h { max-height: 100% }
+
+.v-top { vertical-align: top }
+.v-mid { vertical-align: middle }
+.v-bot { vertical-align: bottom }
+
+.fixed { position: fixed }
+.relative { position: relative }
+.absolute { position: absolute }
+
+.middle {
+    right: 0;
+    left: 0 }
+.center {
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    transform: translatey(-50%) }
+
+.t-left { text-align: left }
+.t-right { text-align: right }
+.t-center { text-align: center }
+.t-just { text-align: justify }
+
+.p-clear { padding: 0!important }
+    .p-top { padding-top: 1rem }
+    .p-bot { padding-bottom: 1rem }
+    .p-left { padding-left: 1rem }
+    .p-right { padding-right: 1rem }
+
+.m-clear { margin: 0!important }
+    .m-top { margin-top: 1rem }
+    .m-bot { margin-bottom: 1rem }
+    .m-left { margin-left: 1rem }
+    .m-right { margin-right: 1rem }
+
+.b-clear { border: 0!important }
+    .b-top { border-width-top: .2rem }
+    .b-bot { border-width-bottom: .2rem }
+    .b-left { border-width-left: .2rem }
+    .b-right { border-width-right: .2rem }
+    .b-top,
+    .b-bot,
+    .b-left,
+    .b-right { border-color: inherit }
+    .b-solid { border-style: solid }
+    .b-dashed { border-style: dashed }
+
+.trans { -webkit-transition: all 0.25s; transition: all 0.25s }
+
+/* Abominations */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  text-decoration: none;
+  cursor: pointer }
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus { outline: 0 }
+
+/* Forms */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none }
+
+/* Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+   Turn off all other ligatures, tabular, lining numerals, and alternates */
+html, body, table {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; }
+
+h1, h2, h3, h4 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1; }
+
+p, em, small, s, strong, b, i, u, span, ul, ol, li {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;  }
+
+abbr {
+  text-transform: uppercase;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1; }
+
+time {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0; }
+
+pre, kbd, samp, code {
+  -webkit-font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+     -moz-font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+          font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; }
+
+sup {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1; }
+
+sub {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1; }
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="number"], input[type="range"], input[type="tel"], input[type="week"] {
+  -webkit-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+     -moz-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+          font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0; }
+/*# sourceMappingURL=app.css.map */
